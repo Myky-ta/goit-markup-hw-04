@@ -85,6 +85,9 @@ img {
 
 .header-container {
     display: flex;
+    box-shadow:  0px 2px 1px rgba(46, 47, 66, 0.08),
+                 0px 1px 1px rgba(46, 47, 66, 0.16), 
+                 0px 1px 6px rgba(46, 47, 66, 0.08);
 }
 
 .header-navigation-address {
@@ -97,11 +100,25 @@ padding-bottom: 32px;
 } 
 
 .header-navigation {
+    position: relative;
+    color: #404bbf;
     display: flex;
     align-items: center;
     flex-grow: 1;
     justify-content: space-between;
     margin-right: 400px;
+    transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.header-navigation::after {
+    content: ''; 
+    width: 100%;
+    position: absolute; 
+    left: 0;
+    bottom: -1px;
+    height: 4px; 
+    background-color: #404bbf; 
+    border-radius: 2px; 
 }
 
 .logo-dark {
@@ -147,6 +164,7 @@ margin-right: 76px;
     display: flex;
     align-items: center;
     gap: 40px ;
+    transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 } 
 
 .nav-link {
@@ -164,6 +182,7 @@ color: #404BBF;
 .address-contacts-list {
     display: flex;
     gap: 40px;
+    transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
     
 
@@ -180,6 +199,27 @@ color: #404BBF;
 
 .address-contacts-link {
     font-style: normal ;
+}
+
+
+/* Hero styles */
+.hero-section {
+    background-color: #2E2F42;
+    background-image:linear-gradient( #2E2F42B2, #2E2F42B2), url(../images/hero\ images.png);
+    padding: 188px 0;
+}
+
+
+.hero-title-class {
+    color: #FFFFFF;
+    font-family: Roboto;
+font-weight: 700;
+font-size: 56px;
+line-height: 1.07;
+letter-spacing: 0.02em ;
+text-align: center;
+max-width: 496px;
+margin: 0 auto;
 }
 
 
