@@ -81,125 +81,148 @@ img {
      background-color: #404BBF;
 }
 
-/* Header styles */
-
+/* Контейнер хедера */
 .header-container {
-    display: flex;
-    box-shadow:  0px 2px 1px rgba(46, 47, 66, 0.08),
-                 0px 1px 1px rgba(46, 47, 66, 0.16), 
-                 0px 1px 6px rgba(46, 47, 66, 0.08);
+  display: flex;
+  box-shadow:
+    0px 2px 1px rgba(46, 47, 66, 0.08),
+    0px 1px 1px rgba(46, 47, 66, 0.16),
+    0px 1px 6px rgba(46, 47, 66, 0.08);
 }
 
+/* Обгортка навігації та адреси */
 .header-navigation-address {
-    border-bottom: 1px solid #e7e9fc;
+  border-bottom: 1px solid #e7e9fc;
 }
 
+/* Відступи для header */
 header {
-padding-top: 24px;
-padding-bottom: 32px;
-} 
-
-.header-navigation {
-    position: relative;
-    color: #404bbf;
-    display: flex;
-    align-items: center;
-    flex-grow: 1;
-    justify-content: space-between;
-    margin-right: 400px;
-    transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  padding-top: 24px;
+  padding-bottom: 32px;
 }
 
-.header-navigation::after {
-    content: ''; 
-    width: 100%;
-    position: absolute; 
-    left: 0;
-    bottom: -1px;
-    height: 4px; 
-    background-color: #404bbf; 
-    border-radius: 2px; 
+/* Навігація */
+.header-navigation {
+  position: relative;
+  color: #404bbf;
+  display: flex;
+  align-items: center;
+  flex-grow: 1;
+  justify-content: space-between;
+  margin-right: 400px;
+  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* ::after для активного пункту меню */
+.nav-link.active::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: -1px;
+  width: 100%;
+  height: 4px;
+  background-color: #404bbf;
+  border-radius: 2px;
+}
+
+/* Логотипи */
+.logo-dark,
+.logo-light,
+.logo-accent {
+  font-family: 'Raleway', sans-serif;
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 1.17;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+  margin-right: 76px;
+  display: flex;
+  align-items: center;
 }
 
 .logo-dark {
-color:  #2e2f42 ;
-font-family: 'Raleway', sans-serif;
-font-size: 18px;
-font-weight: 700;
-line-height: 1.17;
-letter-spacing: 0.03em;
-text-transform: uppercase;
-display: flex;
-align-items: center;
-    margin-right: 76px;
+  color: #2e2f42;
 }
 
 .logo-light {
-    color: #F4F4FD;
-    font-family: 'Raleway', sans-serif;
-    font-weight: 700;
-    font-size: 18px;
-    line-height: 1.17;
-    letter-spacing: 0.03em;
-    text-transform: uppercase; 
-    margin-right: 76px;
-   
-   }
-
-.logo-accent {
-   color:  #4d5ae5; 
-   font-family: 'Raleway', sans-serif;
-font-weight: 700;
-font-size: 18px;
-line-height: 1.17;
-letter-spacing: 0.03em;
-text-transform: uppercase;
- display: inline-block; 
-align-items: center;
-margin-right: 76px;
-    margin-bottom: 16px;
+  color: #f4f4fd;
 }
 
+.logo-accent {
+  color: #4d5ae5;
+  display: inline-block;
+  margin-bottom: 16px;
+}
+
+/* Меню навігації */
 .nav-link-list {
-    display: flex;
-    align-items: center;
-    gap: 40px ;
-    transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
-} 
+  display: flex;
+  align-items: center;
+  gap: 40px;
+  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
 
 .nav-link {
-color: #2e2f42;
-font-weight: 500;
-    letter-spacing: 0.02em;
-     padding: 24px 0;
+  position: relative;
+  color: #2e2f42;
+  font-weight: 500;
+  letter-spacing: 0.02em;
+  padding: 24px 0;
+  text-decoration: none;
+  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .nav-link:hover,
-.nav-link:focus {
-color: #404BBF;  
+.nav-link:focus,
+.nav-link.active {
+  color: #404bbf;
 }
 
+/* Контакти */
 .address-contacts-list {
-    display: flex;
-    gap: 40px;
-    transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  display: flex;
+  gap: 40px;
 }
-    
 
 .contacts-link {
-    color: #434455;
-    font-style: normal;
-    letter-spacing: 0.02em;
+  color: #434455;
+  font-style: normal;
+  letter-spacing: 0.02em;
+  text-decoration: none;
+  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .contacts-link:hover,
 .contacts-link:focus {
-color: #404BBF; 
+  color: #404bbf;
 }
 
 .address-contacts-link {
-    font-style: normal ;
+  font-style: normal;
 }
+
+/* Hero-секція */
+.hero-section {
+  background-color: #2e2f42;
+  background-image: linear-gradient(#2e2f42b2, #2e2f42b2),
+    url(../images/hero-images.png);
+  background-size: cover;
+  background-position: center;
+  padding: 188px 0;
+}
+
+.hero-title-class {
+  color: #ffffff;
+  font-family: 'Roboto', sans-serif;
+  font-weight: 700;
+  font-size: 56px;
+  line-height: 1.07;
+  letter-spacing: 0.02em;
+  text-align: center;
+  max-width: 496px;
+  margin: 0 auto;
+}
+
 
 
 /* Hero styles */
