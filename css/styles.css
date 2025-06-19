@@ -81,27 +81,27 @@ img {
      background-color: #404BBF;
 }
 
-/* Контейнер хедера */
+
 .header-container {
-  display: flex;
   box-shadow:
     0px 2px 1px rgba(46, 47, 66, 0.08),
     0px 1px 1px rgba(46, 47, 66, 0.16),
     0px 1px 6px rgba(46, 47, 66, 0.08);
+    display: flex;
 }
 
-/* Обгортка навігації та адреси */
+
 .header-navigation-address {
   border-bottom: 1px solid #e7e9fc;
 }
 
-/* Відступи для header */
+
 header {
   padding-top: 24px;
   padding-bottom: 32px;
 }
 
-/* Навігація */
+
 .header-navigation {
   position: relative;
   color: #404bbf;
@@ -113,7 +113,7 @@ header {
   transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-/* ::after для активного пункту меню */
+
 .nav-link.active::after {
   content: '';
   position: absolute;
@@ -125,7 +125,7 @@ header {
   border-radius: 2px;
 }
 
-/* Логотипи */
+
 .logo-dark,
 .logo-light,
 .logo-accent {
@@ -154,7 +154,7 @@ header {
   margin-bottom: 16px;
 }
 
-/* Меню навігації */
+
 .nav-link-list {
   display: flex;
   align-items: center;
