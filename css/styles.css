@@ -72,6 +72,7 @@ img {
  border-radius: 4px; 
  padding: 16px 32px;
  margin: 0 auto;
+ transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 
@@ -231,9 +232,16 @@ header {
 
 /* Hero styles */
 .hero-section {
+.hero-section {
     background-color: #2E2F42;
-    background-image:linear-gradient( #2E2F42B2, #2E2F42B2), url(../images/hero\ images.png);
+    background-image: linear-gradient(rgba(46, 47, 66, 0.7), rgba(46, 47, 66, 0.7)),
+    url(../images/hero\ images.png);
+    max-width: 1440px;
+    background-repeat: no-repeat; 
+    background-position: center; 
+    background-size: cover;
     padding: 188px 0;
+}
 }
 
 
