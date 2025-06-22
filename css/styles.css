@@ -104,18 +104,18 @@ header {
 
 
 .header-navigation {
-  display: flex;
-  align-items: center;
-  flex-grow: 1;
-  justify-content: space-between;
-  margin-right: 400px;
-  position: relative;
-  color: #404bbf;
-  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+display: flex;
+align-items: center;
+flex-grow: 1;
+justify-content: space-between;
+margin-right: 400px;
+position: relative;
+transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+color: #404bbf;
 }
 
 
-.header-navigation:active:after {
+.header-navigation::after {
     content: ''; 
     width: 100%;
     position: absolute; 
@@ -533,7 +533,11 @@ letter-spacing: 0.02em;
   transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.footer-socials-link:hover,
+.footer-socials-link:hover {
+background-color: #31d0aa;  
+}
+
+
 .footer-socials-link:focus {
   background-color: #31d0aa;
 }
